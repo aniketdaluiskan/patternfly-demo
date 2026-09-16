@@ -15,8 +15,9 @@ import {
   NavList,
   NavItem,
   Title,
-  Content,
-  ContentVariants,
+  Text,
+  TextContent,
+  TextVariants,
   Button,
   TextInput,
   FormGroup,
@@ -173,13 +174,13 @@ export default function App() {
         <Title headingLevel="h1" size="2xl">
           PatternFly Component Demo
         </Title>
-        <Content>
-          <Content component={ContentVariants.p}>
+        <TextContent>
+          <Text component={TextVariants.p}>
             A single-page reference application exercising a broad set of
             PatternFly React components with semantic, accessible markup. Use
             the navigation on the left to jump to a section.
-          </Content>
-        </Content>
+          </Text>
+        </TextContent>
       </PageSection>
 
       <Divider />
@@ -191,9 +192,9 @@ export default function App() {
         <Title headingLevel="h2" size="xl" id="form-controls-heading">
           Form Controls
         </Title>
-        <Content component={ContentVariants.p}>
+        <Text component={TextVariants.p}>
           Buttons, text input, select, checkbox, radio, switch, and slider.
-        </Content>
+        </Text>
 
         <Form>
           <FormGroup label="Service name" isRequired fieldId="service-name-input">
@@ -311,26 +312,26 @@ export default function App() {
         >
           <Tab eventKey={0} title={<TabTitleText>Overview</TabTitleText>} tabContentId="tab-content-overview">
             <TabContent id="tab-content-overview" eventKey={0}>
-              <Content component={ContentVariants.p} className="pf-v5-u-mt-md">
+              <Text component={TextVariants.p} className="pf-v5-u-mt-md">
                 The order intake service accepts inbound requests, validates
                 payloads, and forwards them to the processing queue.
-              </Content>
+              </Text>
             </TabContent>
           </Tab>
           <Tab eventKey={1} title={<TabTitleText>Metrics</TabTitleText>} tabContentId="tab-content-metrics">
             <TabContent id="tab-content-metrics" eventKey={1}>
-              <Content component={ContentVariants.p} className="pf-v5-u-mt-md">
+              <Text component={TextVariants.p} className="pf-v5-u-mt-md">
                 Average response time: 128ms. Requests per minute: 4,300.
                 Error rate over the last 24 hours: 0.4%.
-              </Content>
+              </Text>
             </TabContent>
           </Tab>
           <Tab eventKey={2} title={<TabTitleText>Configuration</TabTitleText>} tabContentId="tab-content-configuration">
             <TabContent id="tab-content-configuration" eventKey={2}>
-              <Content component={ContentVariants.p} className="pf-v5-u-mt-md">
+              <Text component={TextVariants.p} className="pf-v5-u-mt-md">
                 Auto-scaling is enabled with a minimum of 2 and a maximum of
                 8 replicas.
-              </Content>
+              </Text>
             </TabContent>
           </Tab>
         </Tabs>
@@ -409,11 +410,11 @@ export default function App() {
           onToggle={(_event, expanded) => setIsExpanded(expanded)}
           isExpanded={isExpanded}
         >
-          <Content component={ContentVariants.p}>
+          <Text component={TextVariants.p}>
             Advanced settings include request timeout thresholds, retry
             policy configuration, and circuit breaker sensitivity. Changing
             these values may affect downstream consumers.
-          </Content>
+          </Text>
         </ExpandableSection>
       </PageSection>
 
